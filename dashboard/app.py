@@ -71,7 +71,14 @@ if input_mode == "Live CV (upload satellite image)":
             f.write(uploaded.getbuffer())
         with st.sidebar:
             with st.spinner("Running ship detection..."):
-                result = image_to_congestion_index(temp_path, baseline_count)
+                try:
+                    result = image_to_congestion_index(temp_path, baseline_count)
+                except Exception as e:
+                    import traceback
+                    st.error(type(e).__name__)
+                    st.code(str(e))
+                    st.code(traceback.format_exc())
+                    raise
         jnpt_current = result["congestion_index"]
         st.sidebar.image(uploaded, caption=f"{result['ship_count']} ships detected", use_container_width=True)
         st.sidebar.metric("Computed congestion index", jnpt_current)
