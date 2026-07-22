@@ -1,0 +1,8 @@
+pulp
+numpy
+google-genai
+python-dotenv
+anthropic
+streamlit
+pandas
+ultralytics
