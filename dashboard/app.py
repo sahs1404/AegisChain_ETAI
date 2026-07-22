@@ -27,8 +27,11 @@ from forecast import forecast_congestion, should_preempt
 CV_AVAILABLE = True
 try:
     from infer_congestion import image_to_congestion_index
-except Exception:
+except Exception as e:
     CV_AVAILABLE = False
+    import traceback
+    st.sidebar.error(f"CV import failed: {e}")
+    st.sidebar.code(traceback.format_exc())
 
 st.set_page_config(page_title="AegisChain War Room", layout="wide")
 
