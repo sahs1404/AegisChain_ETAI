@@ -1,9 +1,10 @@
+streamlit
+pandas
+numpy<2
 pulp
-numpy
 google-genai
 python-dotenv
 anthropic
-streamlit
-pandas
-ultralytics
-opencv-python-headless
+
+opencv-python-headless==4.10.0.84
+ultralytics==8.3.0
