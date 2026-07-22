@@ -98,32 +98,6 @@ AegisChain/
 
 ---
 
-## Running it locally
-
-1. Create and activate a virtual environment
-   ```
-   python -m venv venv
-   venv\Scripts\activate        (Windows)
-   source venv/bin/activate     (Mac or Linux)
-   ```
-2. Install dependencies
-   ```
-   pip install -r requirements.txt
-   ```
-3. Set up your API key
-   ```
-   copy .env.example .env        (Windows)
-   cp .env.example .env          (Mac or Linux)
-   ```
-   Open `.env` and paste a free Gemini key from `aistudio.google.com/apikey` after `GEMINI_API_KEY=`.
-4. Run the dashboard
-   ```
-   cd dashboard
-   streamlit run app.py
-   ```
-
----
-
 ## The live product
 
 Deployed at: **https://aegischain.streamlit.app/**
